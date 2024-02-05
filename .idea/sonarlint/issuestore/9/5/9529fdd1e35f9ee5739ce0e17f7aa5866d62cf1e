@@ -1,0 +1,12 @@
+
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ú–¦8Üã©“Ö1
+h
+java:S1192"KDefine a constant instead of duplicating this literal "2024-02-01" 3 times.(”ûÂş8§ÖÙ’Ö1
+n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Û·×õıÿÿÿÿ8¨ÖÙ’Ö1
+L	java:S106"+Replace this use of System.out by a logger.(¸¦•úúÿÿÿÿ8¯ÖÙ’Ö1
+G	java:S106*"+Replace this use of System.out by a logger.(¿î¾8²ÖÙ’Ö1
+X	java:S125."<This block of commented-out lines of code should be removed.(ò¼Àú8´ÖÙ’Ö1
+L	java:S1061"+Replace this use of System.out by a logger.(Ô¹òßÿÿÿÿÿ8´ÖÙ’Ö1
+L	java:S1068"+Replace this use of System.out by a logger.(š—°øÿÿÿÿ8ê·Ü’Ö1
+G	java:S1069"+Replace this use of System.out by a logger.(Ï’ÖÇ8ù—à’Ö1

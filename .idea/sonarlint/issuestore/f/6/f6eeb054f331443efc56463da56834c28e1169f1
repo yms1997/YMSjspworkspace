@@ -1,0 +1,23 @@
+
+t
+java:S2293,"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ëçí÷øÿÿÿÿ
+†
+java:S1319+"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‹ÌË÷
+g
+java:S1450"QRemove the "ps" field and declare it as a local variable in the relevant methods.(œíÂÊ
+l
+java:S1450"QRemove the "rs" field and declare it as a local variable in the relevant methods.(‰Úèüÿÿÿÿ
+´
+java:S6548
+"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÊÉëœúÿÿÿÿ
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ªù‰ıÿÿÿÿÿ
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÿòÍÉ
+H
+java:S4925"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ
+Q
+java:S6437 "6Revoke and change this password, as it is compromised.(’àŒµüÿÿÿÿ
+E	java:S106!"+Replace this use of System.out by a logger.(ÎØø¥ıÿÿÿÿ
+@	java:S106$"+Replace this use of System.out by a logger.(©‚ù­
+E	java:S106@"+Replace this use of System.out by a logger.(à¿öÑúÿÿÿÿ
