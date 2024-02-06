@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="${ctx}/css/style.css" />
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 </head>
 <body>
 
@@ -16,8 +17,8 @@
 	<div class ="row">
 		<div class="w-50 py-3" onclick="location.href='${ctx}/memberList.do'"> 회원목록 </div>
 		<c:if test="${ empty log }">
-		<div class="w-25 py-3" onclick="location.href='${ctx}/member/memberInsert.jsp'"> 회원가입 </div>
-		<div class="w-25 py-3" onclick="location.href='${ctx}/member/memberLogin.jsp'"> 로그인 </div>
+		<div class="w-25 py-3" onclick="location.href='${ctx}/memberInsert.do'"> 회원가입 </div>
+		<div class="w-25 py-3" onclick="location.href='${ctx}/memberLogin.do'"> 로그인 </div>
 		</c:if>
 		<c:if test="${log ne null }">
 		<div class="w-25 py-3" onclick="location.href='${ctx}/memberContent.do?num=${log}'"> 내정보 </div>

@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ include file= "./header.jsp" %>
+<%@ include file= "../../header.jsp" %>
+<script type="text/javascript">
+  function deleteFn(num){
+	  location.href="${ctx}/memberDelete.do?num=" + num; 
+  }
+  
+</script>
 <h1 class="py-3"> 회원 목록</h1>
 
 <table class=" py-10 table table-bordered">
@@ -24,7 +30,7 @@
     	    <td>${vo.age}</td>
     	    <td>${vo.email}</td>
     	    <td>${vo.phone}</td>
-    	    <td><input type="button" value="삭제" class="btn btn-outline-dark" onclick="location.href='${ctx}/memberDelete.do?num=${vo.num}'"></td>
+    	    <td><input type="button" value="삭제" class="btn btn-outline-dark" onclick="deleteFn('${vo.num}')"></td>
     	  </tr>    	 
   </c:forEach>
 

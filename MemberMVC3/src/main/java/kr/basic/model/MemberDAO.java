@@ -30,7 +30,7 @@ public class MemberDAO {
        try{
            Class.forName("com.mysql.cj.jdbc.Driver");
            conn = DriverManager.getConnection(url, user, password);
-           System.out.println(conn);
+//           System.out.println(conn);
        }catch(SQLException e){
            e.printStackTrace();
            System.out.println("연동실패");
@@ -63,7 +63,7 @@ public class MemberDAO {
 				
 				Member m = new Member(num,id,pass,name,age,email,phone);
 				list.add(m);
-				System.out.println(m);
+//				System.out.println(m);
 			}
 		
 		} catch (SQLException e) {
