@@ -16,7 +16,7 @@ public class VaildIdAjaxController implements Controller {
 
 		// $.ajax();
 		String id = request.getParameter("id"); // { "id" : id  }
-		String passData = MemberDAO.getInstance().isValidId(id)? "notValid" : "valid";
+		String passData = MemberDAO.getInstance().isValidId(id) ? "notValid" : "valid";
 	
 		// ajax() 함수에 만들어놓은 callback함수 응답
 		response.getWriter().print(passData); // "notValid" : "valid";

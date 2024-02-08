@@ -1,47 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ include file= "../../header.jsp" %>
-<h1 class="py-3"> 회원 가입</h1>
-<form action="${ctx}/memberInsert.do" method="post">
-<table class="table table-bordered">
-  <tr>
-    <td>아이디</td>
-    <td><input class="col-12" type="text" name="id" autofocus required/>
-    	<input type="button" value="중복체크" id="checkId" class="btn btn-outline-dark"></td>
-  </tr>
-  <tr>
-    <td>패스워드</td>
-    <td><input class="col-12" type="password" name="pass" required/></td>
-  </tr>
-  <tr>
-    <td>이름</td>
-    <td><input class="col-12" type="text" name="name" required/></td>
-  </tr>
-  <tr>
-    <td>나이</td>
-    <td><input class="col-12" type="text" name="age" required/></td>
-  </tr>
-  <tr>
-    <td>이메일</td>
-    <td><input class="col-12" type="text" name="email" required/></td>
-  </tr>
-  <tr>
-    <td>전화번호</td>
-    <td><input class="col-12" type="text" name="phone" required/></td>
-  </tr>
-  <tr>
-    <td colspan="2" id="btns">
-      <input type="button" value="가입" class="col-3 btn btn-primary" onclick="validCheck(form)"/>
-      <input type="reset" value="취소" class="col-3 btn btn-warning"/>
-    </td>
-  </tr>
-</table>
-</form>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ include file="../../header.jsp"%>
+<style>
+tr :last-child {
+	text-align: left;
+}
+
+input[type=submit], input[type=reset] {
+	text-align: center;
+}
+
+#btns {
+	text-align: center;
+}
+</style>
+<body>
+	<h1 class="py-3">회원 가입</h1>
+	<form action="${ctx}/memberInsert.do" method="post">
+		<table class="table table-bordered">
+			<tr>
+				<td>아이디</td>
+				<td><input class="col-12" type="text" name="id" id="id" autofocus
+					required /> <input type="button" value="중복체크" id="checkId"
+					class="btn btn-outline-dark"></td>
+			</tr>
+			<tr>
+				<td>패스워드</td>
+				<td><input class="col-12" type="password" name="pass" id="pw" required /></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><input class="col-12" type="text" name="name" id="name" required /></td>
+			</tr>
+			<tr>
+				<td>나이</td>
+				<td><input class="col-12" type="text" name="age" id="age" required /></td>
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td><input class="col-12" type="text" name="email" id="email" required /></td>
+			</tr>
+			<tr>
+				<td>전화번호</td>
+				<td><input class="col-12" type="text" name="phone" id="phone" required /></td>
+			</tr>
+			<tr>
+				<td colspan="2" id="btns"><input type="button" value="가입"
+					class="col-3 btn btn-primary" onclick="validCheck(form)" /> <input
+					type="reset" value="취소" class="col-3 btn btn-warning" /></td>
+			</tr>
+		</table>
+	</form>
 
 </body>
 </html>
-<script>
+<script type="text/javascript">
 	let check = 0;
 	function validCheck(form){
 		if(!form.id.value.trim()){
@@ -95,7 +109,7 @@
 		}
 		form.submit();
 	}
-	document.getElementById("checkId").addEvenetListener("click", () => {
+	document.getElementById("checkId").addEventListener("click", () => {
 		let id = document.getElementById("id").value.trim();
 		
 		if(id.length === 0){
@@ -111,7 +125,7 @@
 		    },
 		    body: "id=" + id,
 		})
-		.then(response => response.text());
+		.then(response => response.text())
 		.then(getResult)
 		.catch(() => alert("error"));
 	});
@@ -122,5 +136,18 @@
 			document.getElementById("id").style.border = "3px blue solid";
 			check = 1;
 		}
+		else if(data === "notValid"){
+			alert("이 아이디는 사용불가능 합니다");
+			document.getElementById("id").value = "";
+			document.getElementById("id").focus();
+			document.getElementById("id").style.border = "3px red solid";
+			check = -1;
+		}
 	}
+	document.getElementById("id").addEventListener("keyup", (e) => {
+		if(e.keycode === 8){
+			check = 0;
+		}
+		document.getElemenetById("id").style.border = "";
+	});
 </script>

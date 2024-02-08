@@ -21,7 +21,6 @@ public void getConnect() {
 	   String user="root";
 	   String password="1234";
 	  try {
-
 		  Class.forName("com.mysql.cj.jdbc.Driver");		  
 		  conn=DriverManager.getConnection(URL, user, password);
 		  System.out.println("db 연동성공: " + conn );

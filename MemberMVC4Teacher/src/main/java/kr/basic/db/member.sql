@@ -1,4 +1,4 @@
- -- primary key 데이터가 유일하고 비어있지 않는 데이터 not null 
+  -- primary key 데이터가 유일하고 비어있지 않는 데이터 not null 
 -- unique key null은 가능하나 데이터 중복은 허용하지않음 
 create table member(
     num int primary key auto_increment, 

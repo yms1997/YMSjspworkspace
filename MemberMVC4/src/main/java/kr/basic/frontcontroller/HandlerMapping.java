@@ -16,6 +16,7 @@ public class HandlerMapping {
 		mappings.put("/memberInsert.do", new MemberInsertController());
 		mappings.put("/memberContent.do", new MemberContentController());
 		mappings.put("/memberUpdate.do", new MemberUpdateController());
+		mappings.put("/vaildIdAjax.do", new VaildIdAjaxController());
 	}
 	public Controller getController(String key) { // key -> /memberList.do
 		return mappings.get(key);
